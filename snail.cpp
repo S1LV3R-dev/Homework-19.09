@@ -34,9 +34,13 @@ void Solve(int a, int b){
 void Output(){
   int w = n * m;
 	w = log10(w) + 2;
+	int z = log10(n*m)+1;
 	for(int i = 0;i < n;++i){
 		for(int j = 0;j < m;++j)
-      cout << setw(w) << mas[i][j];
+		if (mas[i][j] >=10)
+      		cout << setw(w) << mas[i][j];
+		else
+      		cout << setw(z) << 0 << mas[i][j];
 		cout << "\n";
 	}
 }
